@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Majo - a frontend developer</title>
+    <link rel="icon" type="image/png" href="logo.png"/>
+    <link href="https://fonts.googleapis.com/css?family=Arsenal|Lato|Oswald:300|Roboto+Mono|Sacramento&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/estilos.css">
+    <link rel="stylesheet" href="css/animate.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+  </head>
+  <body>
+    <i class="icon-menu burguer-button" id="burger-menu"></i>
+    <header class="header">
+        <figure class="logo">
+          <img src="./images/logom.png" alt="Logo de Majo" height="80px" width="80px">
+        </figure>
+        <div class="close"></div>
+      <nav class="menu">
+        <ol>
+          <li>
+            <a class="link" href="#about">About</a>
+          </li>
+          <li>
+            <a class ="link" href="#somework">Work</a>
+          </li>
+          <li>
+            <a class="link" href="#contact">Let's magic!</a>
+          </li>
+        </ol>
+      </nav>
+    </header>
+    <section class="hero">
+      <div class="Iam">
+      <b>
+        <div class="innerIam">
+          Hi!<br />
+          Hola!<br />
+          Bonjour!<br />
+          Namaste!<br />
+          Aloha!
+          </div>
+      </b>
+      </div>
+      <h1>
+      <strong>
+      I´m Majo.</strong><br/><h4 class="animated pulse delay-0.5s">a <span class="highlight">Frontend Developer</span> based in Buenos Aires, Argentina</h4>
+    </h1>
+    <h3>always hungry, curious & learning</h3>
+    <p>please, scroll down</p>
+    <figure class="scroll">
+    <a href="#about"><img src="./images/scroll.jpg" alt="Scroll" height="30px" width="30px" class="animated infinite pulse"></a>
+    </figure>
+    </section>
+    <section id="about" class="aboutme">
+      <section class="sobremi">
+          <h2 class="titulo-seccion">About</h2>
+        <p><span class="aboutme-highlight">I'M A FRONTEND DEVELOPER WITH UI DESIGN SKILLS.</span> Utilizo <span class="aboutme-highlight2">Adobe XD</span> and <span class="aboutme-highlight2">Photoshop</span> como Creative Software y así digitalizar los wireframes hechos en papel.<br/> Mediante <span class="aboutme-highlight2">HTML</span> y <span class="aboutme-highlight2">CSS</span> los diseños cobran vida, y <span class="aboutme-highlight2">JavaScript</span> aplica la magia.<br/>Currently adding React and Redux skills.<br/> Surflover and Astronomy Enthusiast.
+        </p>
+    </section>
+    </section>
+  <div class="contenedor-works">
+    <h2 class="titulo-seccion2">Some work</h2>
+    <section id="somework" class="event-list">
+      <article class="event">
+        <a class="event-url" href="https://majoledesma.github.io/jackjohnson/" target= _blank><figure class="event-imageContainer">
+          <img class="event-image" src= "./images/jacksinger.png">
+        </figure></a>
+      </article>
+      <article class="event">
+        <a class="event-url" href="https://majoledesma.github.io/podcast/" target= _blank><figure class="event-imageContainer">
+          <img class="event-image" src="./images/podcast.png" width=300>
+        </figure></a>
+      </article>
+      <article class="event working">
+        <a class="event-url" target= _blank>
+          <p>WORKIN' ON IT</p>
+          <img class="event-image" width=300>
+        </figure></a>
+     </article>
+    </section>
+   </div> 
+   <div class="notes">
+     <h2 class="titulo-notes">NOTES</h2>
+     <div class="secciones-notes">
+     <a href="https://ar.pinterest.com/majo_mogul/notes/" target="_blank"><div class="div-notes">!🙈</div></a>
+    </div>
+   </div>
+    <section id="contact" class="contact">
+      <h3><span class="contact-highlight">Let's MAGIC!</span></h3>
+      <div class="social">
+        <a href="https://www.linkedin.com/in/maria-jose-ledesma2/" class="social-link linkedin"></a>
+        <a href="https://www.instagram.com/majoledes" class="social-link instagram"></a>
+        <a href="" class="social-link github"></a>
+        <a href="" class="social-link email"></a>
+     </section>
+    <footer class="footer">© 2019 Majo Ledesma. All rights reserved.</footer>
+      <script>
+        const ipad = window.matchMedia('screen and (max-width:767px)')
+        const menu = document.querySelector('.menu');
+        const burgerButton = document.querySelector('#burger-menu');
+        burgerButton.addEventListener('click', hideShow);
+        ipad.addListener(validation);
+        function validation(event){
+          if(event.matches){
+          burgerButton.addEventListener('click', hideShow);
+          } else {
+          burgerButton.removeEventListener('click', hideShow);
+          }
+        }
+        function hideShow() {
+        if (menu.classList.contains('is-active')){
+          menu.classList.remove('is-active');
+          } else {
+          menu.classList.add('is-active');
+          }
+        validation(ipad);
+        }
+      </script>
+  </body>
+</html>
